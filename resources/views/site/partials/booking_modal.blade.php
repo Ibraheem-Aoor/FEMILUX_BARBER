@@ -20,7 +20,7 @@
                                     <input class="form-check-input" type="checkbox" id="service{{ $service->id }}"
                                         name="service_ids[]" value="{{ $service->id }}">
                                     <label class="form-check-label" for="service{{ $service->id }}">
-                                        {{ $service->title }} - ${{ $service->price }}
+                                        {{ $service->title }} - {{ formatPrice($service->price) }}
                                     </label>
                                 </div>
                             @endforeach
