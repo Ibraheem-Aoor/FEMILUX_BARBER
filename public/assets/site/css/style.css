@@ -94,6 +94,7 @@
 }
 
 @media (max-width: 991.98px) {
+
     .navbar .navbar-nav .nav-link,
     .navbar.shadow-sm .navbar-nav .nav-link {
         margin-right: 0;
@@ -156,7 +157,7 @@
         position: relative;
         min-height: 450px;
     }
-    
+
     #header-carousel .carousel-item img {
         position: absolute;
         width: 100%;
@@ -170,7 +171,7 @@
     background-size: cover;
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
     color: var(--light);
 }
 
@@ -327,3 +328,18 @@
 .footer .copyright a:hover {
     color: var(--primary);
 }
+
+.navbar-brand .text-uppercase img{
+    width: 8%;
+}
+/* Center the logo image for small devices */
+@media (max-width: 768px) {
+    .navbar-brand .text-uppercase {
+        text-align: center !important;
+    }
+    .navbar-brand .text-uppercase img{
+        width: 10%;
+    }
+}
+
+
