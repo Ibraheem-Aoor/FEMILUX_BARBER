@@ -16,7 +16,7 @@
             <table class="table table-bordered" id="sliders-table">
                 <thead>
                     <tr>
-                        <th>{{ __('general.slider_image') }}{{ __('max_size', ['size' => '1MB']) }}</th>
+                        <th>{{ __('general.slider_image') }} {{ __('general.max_size', ['size' => '1MB']) }}</th>
                         <th>{{ __('general.preview') }}</th>
                         <th>{{ __('general.slider_image_text') }}</th>
                         <th>{{ __('general.actions') }}</th>

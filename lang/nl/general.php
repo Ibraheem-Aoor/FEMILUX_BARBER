@@ -62,5 +62,11 @@ return [
     'hours_to' => 'Tot',
     'site_address' => 'Site-adres',
     'time_between_bookings_in_minutes' => 'Tijd Tussen Boekingen (In Minuten)',
+    'slider_image' => 'Sliderafbeelding',
+    'preview' => 'Voorbeeld',
+    'slider_image_text' => 'Tekst',
+    'max_size' => 'Maximale grootte: :size',
+    'add' => 'Toevoegen',
+    'location_on_google_maps' => 'Locatie op Google Maps [iframe]',
 ];
 

@@ -84,6 +84,14 @@
                                 </div>
                             </div>
                         </div><!--end col-->
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <label class="form-label">{{ __('general.location_on_google_maps') }}<span class="text-danger">*</span></label>
+                                <div class="form-icon position-relative">
+                                    <input type="text" name="location" id="location" required value="{{ @$settings['location'] }}" class="form-control">
+                                </div>
+                            </div>
+                        </div><!--end col-->
                     </div><!--end row-->
                     <button type="submit" class="btn btn-primary">{{ __('general.save') }}</button>
                 </form>

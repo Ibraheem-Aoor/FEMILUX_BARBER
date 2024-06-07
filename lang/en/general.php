@@ -60,6 +60,12 @@ return [
     'day' => 'Day',
     'hours_from' => 'From',
     'hours_to' => 'To',
-    'site_address' => '',
+    'site_address' => 'Address',
     'time_between_bookings_in_minutes' => 'Time Between Bookings (In Minutes)',
+    'slider_image' => 'Slider Image',
+    'preview' => 'Preview',
+    'slider_image_text' => 'Text',
+    'max_size' => 'Max Size: :size',
+    'add' => 'Add',
+    'location_on_google_maps' => 'Location On Google Maps [iframe]',
 ];
