@@ -30,6 +30,7 @@
                 <a href="javascript:void(0)"><i class="ti ti-license me-2"></i>{{ __('general.pages') }}</a>
                 <div class="sidebar-submenu">
                     <ul>
+                        <li><a href="{{ route('admin.page.edit', ['slug' => 'home']) }}">{{ __('general.home') }}</a></li>
                         <li><a href="{{ route('admin.page.edit', ['slug' => 'about']) }}">{{ __('general.about') }}</a></li>
                     </ul>
                 </div>

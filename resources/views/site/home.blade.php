@@ -6,32 +6,22 @@
     <div class="container-fluid p-0 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="w-100" src="{{ asset('assets/site/img/carousel-1.jpg') }}" alt="Image">
-                    <div class="carousel-caption d-flex align-items-center justify-content-center text-start">
-                        <div class="mx-sm-5 px-5" style="max-width: 900px;">
-                            <h1 class="display-2 text-white text-uppercase mb-4 animated slideInDown">
-                                {{ __('site.we_will_keep_you_an_awesome_look') }}</h1>
-                            <h4 class="text-white text-uppercase mb-4 animated slideInDown"><i
-                                    class="fa fa-map-marker-alt text-primary me-3"></i>{{ @$settings['address'] }}</h4>
-                            <h4 class="text-white text-uppercase mb-4 animated slideInDown"><i
-                                    class="fa fa-phone-alt text-primary me-3"></i>{{ $settings['phone'] }}</h4>
+                @foreach ($sliders as $slider)
+                    <div class="carousel-item @if($loop->first) active @endif">
+                        <img class="w-100" src="{{ getImageUrl($slider['image']) }}" alt="{{ $slider['text'] }}">
+                        <div class="carousel-caption d-flex align-items-center justify-content-center text-start">
+                            <div class="mx-sm-5 px-5" style="max-width: 900px;">
+                                <h1 class="display-2 text-white text-uppercase mb-4 animated slideInDown">
+                                    {{ $slider['text'] }}</h1>
+                                <h4 class="text-white text-uppercase mb-4 animated slideInDown"><i
+                                        class="fa fa-map-marker-alt text-primary me-3"></i>{{ @$settings['address'] }}</h4>
+                                <h4 class="text-white text-uppercase mb-4 animated slideInDown"><i
+                                        class="fa fa-phone-alt text-primary me-3"></i>{{ $settings['phone'] }}</h4>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="w-100" src="{{ asset('assets/site/img/carousel-2.jpg') }}" alt="Image">
-                    <div class="carousel-caption d-flex align-items-center justify-content-center text-start">
-                        <div class="mx-sm-5 px-5" style="max-width: 900px;">
-                            <h1 class="display-2 text-white text-uppercase mb-4 animated slideInDown">
-                                {{ __('site.luxury_haircut_at_affordable_price') }}</h1>
-                            <h4 class="text-white text-uppercase mb-4 animated slideInDown"><i
-                                    class="fa fa-map-marker-alt text-primary me-3"></i>{{ @$settings['address'] }}</h4>
-                            <h4 class="text-white text-uppercase mb-4 animated slideInDown"><i
-                                    class="fa fa-phone-alt text-primary me-3"></i>{{ $settings['phone'] }}</h4>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -219,4 +209,3 @@
     </div>
     <!-- Testimonial End -->
 @endsection
-

@@ -44,8 +44,10 @@ Route::middleware('auth:admin')
         });
         // Pages
         Route::prefix('pages')->name('page.')->group(function () {
+            Route::get('edit/home', [PageController::class, 'editHomePage'])->name('edit_home');
             Route::get('edit/{slug}', [PageController::class, 'edit'])->name('edit');
             Route::post('update/{slug}', [PageController::class, 'update'])->name('update');
+            Route::post('update/home/page', [PageController::class, 'updateHomePage'])->name('update_home');
         });
         // Services
         Route::prefix('services')->name('service.')->group(function () {

@@ -44,8 +44,9 @@ class HomeController extends BaseSiteContoller
         $data['services'] = $this->services;
         $data['barbers'] = $this->barbers;
         $data['about_page'] = $this->about_page;
-        $data['work_hours'] = cacheAndGet('work_hours' , now()->addWeek() , WorkHours::first());
+        $data['work_hours'] = cacheAndGet('work_hours', now()->addWeek(), WorkHours::first());
         $data['week_days'] = getEuWeekDays();
+        $data['sliders'] = cacheAndGet('home_page_sliders', now()->addWeek(), json_decode(Page::query()->whereSlug('home')->first()?->content, true)['sliders']);
         return view($this->base_view_path . 'home', $data);
     }
 
