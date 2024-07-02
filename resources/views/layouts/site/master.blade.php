@@ -29,7 +29,7 @@
     <link href="{{ asset('assets/site/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="{{ asset('assets/site/css/style.css') }}?v=0.01" rel="stylesheet">
+    <link href="{{ asset('assets/site/css/style.css') }}?v=0.02" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 

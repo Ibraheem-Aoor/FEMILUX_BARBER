@@ -7,9 +7,9 @@
         <div class="container">
             <div class="row g-0">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="bg-secondary p-5">
-                        <p class="d-inline-block bg-dark text-primary py-1 px-4">{{ __('site.contact_us') }}</p>
-                        <h1 class="text-uppercase mb-4">{{ __('site.have_any_query') }}</h1>
+                    <div class="bg-custom p-5">
+                        <p class="d-inline-block bg-white text-primary py-1 px-4">{{ __('site.contact_us') }}</p>
+                        <h1 class="text-uppercase mb-4 text-primary">{{ __('site.have_any_query') }}</h1>
                         {{-- <p class="mb-4">{{ __('site.contact_form_inactive') }} <a href="https://htmlcodex.com/contact-form">{{ __('site.download_now') }}</a>.</p> --}}
                         <form action="{{ route('site.contact.submit') }}" class="custom-form" method="POST">
                             @csrf

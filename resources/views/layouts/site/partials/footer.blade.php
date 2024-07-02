@@ -6,19 +6,19 @@
                 <h4 class="text-uppercase mb-4">{{ __('site.get_in_touch') }}</h4>
                 <div class="d-flex align-items-center mb-2">
                     <div class="btn-square bg-dark flex-shrink-0 me-3">
-                        <span class="fa fa-map-marker-alt text-primary"></span>
+                        <span class="fa fa-map-marker-alt text-white"></span>
                     </div>
                     <span>{{ @$settings['address'] }}</span>
                 </div>
                 <div class="d-flex align-items-center mb-2">
                     <div class="btn-square bg-dark flex-shrink-0 me-3">
-                        <span class="fa fa-phone-alt text-primary"></span>
+                        <span class="fa fa-phone-alt text-white"></span>
                     </div>
                     <span>{{ @$settings['phone'] }}</span>
                 </div>
                 <div class="d-flex align-items-center">
                     <div class="btn-square bg-dark flex-shrink-0 me-3">
-                        <span class="fa fa-envelope-open text-primary"></span>
+                        <span class="fa fa-envelope-open text-white"></span>
                     </div>
                     <span>{{ @$settings['email'] }}</span>
                 </div>
@@ -38,10 +38,10 @@
                     <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">{{ __('site.signup') }}</button>
                 </div>
                 <div class="d-flex pt-1 m-n1">
-                    <a class="btn btn-lg-square btn-dark text-primary m-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-lg-square btn-dark text-primary m-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-lg-square btn-dark text-primary m-1" href=""><i class="fab fa-youtube"></i></a>
-                    <a class="btn btn-lg-square btn-dark text-primary m-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-lg-square btn-dark text-white m-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-lg-square btn-dark text-white m-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-lg-square btn-dark text-white m-1" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-lg-square btn-dark text-white m-1" href=""><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>

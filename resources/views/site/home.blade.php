@@ -11,11 +11,11 @@
                         <img class="w-100" src="{{ getImageUrl($slider['image']) }}" alt="{{ $slider['text'] }}">
                         <div class="carousel-caption d-flex align-items-center justify-content-center text-start">
                             <div class="mx-sm-5 px-5" style="max-width: 900px;">
-                                <h1 class="display-2 text-white text-uppercase mb-4 animated slideInDown">
+                                <h1 class="display-2 text-primary text-uppercase mb-4 animated slideInDown">
                                     {{ $slider['text'] }}</h1>
-                                <h4 class="text-white text-uppercase mb-4 animated slideInDown"><i
+                                <h4 class="text-primary text-uppercase mb-4 animated slideInDown"><i
                                         class="fa fa-map-marker-alt text-primary me-3"></i>{{ @$settings['address'] }}</h4>
-                                <h4 class="text-white text-uppercase mb-4 animated slideInDown"><i
+                                <h4 class="text-primary text-uppercase mb-4 animated slideInDown"><i
                                         class="fa fa-phone-alt text-primary me-3"></i>{{ $settings['phone'] }}</h4>
                             </div>
                         </div>
@@ -57,14 +57,14 @@
             <div class="container">
                 <div class="row g-0">
                     <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                        <div class="bg-secondary h-100 d-flex flex-column justify-content-center p-5">
-                            <p class="d-inline-flex bg-dark text-primary py-1 px-4 me-auto">
+                        <div class="bg-custom h-100 d-flex flex-column justify-content-center p-5">
+                            <p class="d-inline-flex bg-dark text-white py-1 px-4 me-auto">
                                 {{ __('site.service_and_price') }}</p>
-                            <h1 class="text-uppercase mb-4">{{ __('site.check_out_our_barber_services_and_prices') }}</h1>
+                            <h1 class="text-uppercase mb-4 text-primary">{{ __('site.check_out_our_barber_services_and_prices') }}</h1>
                             <div>
                                 @foreach ($services as $service)
                                     <div class="d-flex justify-content-between border-bottom py-2">
-                                        <h6 class="text-uppercase mb-0">{{ $service->title }}</h6>
+                                        <h6 class="text-uppercase mb-0 text-primary">{{ $service->title }}</h6>
                                         <span class="text-uppercase text-primary">{{ formatPrice($service->price) }}</span>
                                     </div>
                                 @endforeach
@@ -89,7 +89,7 @@
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <p class="d-inline-block bg-secondary text-primary py-1 px-4">{{ __('site.our_barber') }}</p>
+                    <p class="d-inline-block bg-custom text-primary py-1 px-4">{{ __('site.our_barber') }}</p>
                     <h1 class="text-uppercase">{{ __('site.meet_our_barber') }}</h1>
                 </div>
                 <div class="row g-4">
@@ -105,8 +105,8 @@
                                     <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a> --}}
                                     </div>
                                 </div>
-                                <div class="bg-secondary text-center p-4">
-                                    <h5 class="text-uppercase">{{ $barber->name }}</h5>
+                                <div class="bg-custom text-center p-4">
+                                    <h5 class="text-uppercase text-primary">{{ $barber->name }}</h5>
                                     <span class="text-primary d-none">{{ __('site.designation') }}</span>
                                 </div>
                             </div>
@@ -129,13 +129,13 @@
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="bg-secondary h-100 d-flex flex-column justify-content-center p-5">
-                        <p class="d-inline-flex bg-dark text-primary py-1 px-4 me-auto">{{ __('site.working_hours') }}</p>
-                        <h1 class="text-uppercase mb-4">{{ __('site.professional_barbers_are_waiting_for_you') }}</h1>
+                    <div class="bg-custom h-100 d-flex flex-column justify-content-center p-5">
+                        <p class="d-inline-flex bg-dark text-white py-1 px-4 me-auto">{{ __('site.working_hours') }}</p>
+                        <h1 class="text-uppercase mb-4 text-primary">{{ __('site.professional_barbers_are_waiting_for_you') }}</h1>
                         <div>
                             @foreach ($week_days as $day)
                                 <div class="d-flex justify-content-between border-bottom py-2">
-                                    <h6 class="text-uppercase mb-0">{{ __('site.' . $day) }}</h6>
+                                    <h6 class="text-uppercase mb-0 text-primary">{{ __('site.' . $day) }}</h6>
                                     @php
                                         $off_day = true;
                                         $hours_from = $day . '_hours_from';
