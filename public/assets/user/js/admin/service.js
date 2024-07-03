@@ -135,6 +135,7 @@ $('#service-modal').on('show.bs.modal', function (e) {
         $(this).find('#title').val(btn.getAttribute('data-title'));
         $(this).find('#description').val(btn.getAttribute('data-description'));
         $(this).find('#price').val(btn.getAttribute('data-price'));
+        $(this).find('#time_between_bookings').val(btn.getAttribute('data-time-between-bookings'));
         var status = btn.getAttribute('data-status') == 1 ? 'checked' : null;
         $(this).find('#status').prop('checked', status);
     }

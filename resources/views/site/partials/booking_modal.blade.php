@@ -107,11 +107,16 @@
             });
 
             function fetchAvailableTimes(date) {
+                var serviceIds = [];
+                $('input[name="service_ids[]"]:checked').each(function() {
+                    serviceIds.push($(this).val());
+                });
                 $.ajax({
                     url: '{{ route('site.booking.fetch_available_times') }}',
                     type: 'GET',
                     data: {
-                        date: date
+                        date: date,
+                        service_ids: serviceIds,
                     },
                     success: function(response) {
                         var times = response.available_times;

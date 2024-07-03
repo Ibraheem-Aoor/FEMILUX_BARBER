@@ -78,14 +78,6 @@
                         </div><!--end col-->
                         <div class="col-md-12">
                             <div class="mb-3">
-                                <label class="form-label">{{ __('general.time_between_bookings_in_minutes') }}<span class="text-danger">*</span></label>
-                                <div class="form-icon position-relative">
-                                    <input type="number" name="time_between_bookings" id="time_between_bookings" required value="{{ @$settings['time_between_bookings'] }}" class="form-control">
-                                </div>
-                            </div>
-                        </div><!--end col-->
-                        <div class="col-md-12">
-                            <div class="mb-3">
                                 <label class="form-label">{{ __('general.location_on_google_maps') }}<span class="text-danger">*</span></label>
                                 <div class="form-icon position-relative">
                                     <input type="text" name="location" id="location" required value="{{ @$settings['location'] }}" class="form-control">

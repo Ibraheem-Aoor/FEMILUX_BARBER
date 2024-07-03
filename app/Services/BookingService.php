@@ -60,7 +60,7 @@ class BookingService extends BaseModelService
     {
         $startTime = Carbon::createFromFormat('H:i', $start);
         $endTime = Carbon::createFromFormat('H:i', $end);
-        $interval = Setting::query()->where('key' , 'time_between_bookings')->first()?->value ?? 30; // 30 minutes default
+        $interval = Service::query()->whereIn('id' , request('service_ids'))->min('time_between_bookings') ?? 30; // 30 minutes default
         $times = [];
         while ($startTime->lte($endTime)) {
             $time = $startTime->format('h:i A'); // 12-hour format with AM/PM

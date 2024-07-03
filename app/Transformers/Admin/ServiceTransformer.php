@@ -33,7 +33,7 @@ class ServiceTransformer extends TransformerAbstract
         <a data-method="POST"  data-bs-toggle="modal"
             data-header-title="'.__('general.update_service').': ' . $service->title . '"
             data-bs-target="#service-modal" data-image="' . getImageUrl($service->image) . '" data-title="' . $service->title . '"
-            data-description="' . $service->description . '" data-price="' . formatPrice($service->price , false) . '" data-status="' . $service->status . '"
+            data-description="' . $service->description . '" data-price="' . formatPrice($service->price , false) . '" data-status="' . $service->status . '" data-time-between-bookings="' . $service->time_between_bookings . '"
             data-action="'.route('admin.service.update' , encrypt($service->id)).'" data-method="POST"
             class="btn btn-sm btn-soft-primary"><img loading="lazy" width="10" height="10" src="' . asset('assets/common/edit.svg') . '"></a>
 
