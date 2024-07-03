@@ -34,6 +34,11 @@ class BookingController extends BaseAdminController
         return view("{$this->base_view_path}.index", $data);
     }
 
+    public function destroy($id)
+    {
+        return $this->service->delete(decrypt($id));
+    }
+
 
     public function getTableData(Request $request)
     {

@@ -76,6 +76,7 @@ Route::middleware('auth:admin')
         Route::prefix('bookings')->name('booking.')->group(function () {
             Route::get('', [BookingController::class, 'index'])->name('index');
             Route::get('/table-data', [BookingController::class, 'getTableData'])->name('table');
+            Route::delete('/destroy/{id}', [BookingController::class, 'destroy'])->name('destroy');
         });
         // Work Hours
         Route::prefix('site-settings')->name('setting.')->group(function () {
