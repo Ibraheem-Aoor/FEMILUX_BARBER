@@ -57,7 +57,7 @@ class NewBookingNotification extends Notification
     {
         return [
             'title' => 'new_booking',
-            'link' => route('admin.booking.index' , ['booking_id' => $this->booking->id , 'notification_id' => $this->id]),
+            'link' => config('app.url') . route('admin.booking.index' , ['booking_id' => $this->booking->id , 'notification_id' => $this->id] , false),
         ];
     }
 }
